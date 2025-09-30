@@ -1,0 +1,68 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-width: 1366px;
+}
+
+:root {
+	--header-height: 52px;
+	--default-width-scrollbar: 6px;
+	--firefox-width-scrollbar: 8px;
+	--color-scrollbar-thumb: #eaeaea;
+	--color-hover-scrollbar-thumb: #b0b0b1;
+}
+
+html,
+body,
+* {
+	scrollbar-width: thin;
+	scrollbar-color: var(--color-scrollbar-thumb) transparent;
+}
+
+.ant-tree-list-scrollbar.ant-tree-list-scrollbar-vertical,
+.ant-table-tbody-virtual-scrollbar.ant-table-tbody-virtual-scrollbar-vertical,
+.rc-virtual-list-scrollbar.rc-virtual-list-scrollbar-vertical {
+	width: var(--default-width-scrollbar) !important;
+}
+
+.ant-tree-list-scrollbar.ant-tree-list-scrollbar-horizontal,
+.ant-table-tbody-virtual-scrollbar.ant-table-tbody-virtual-scrollbar-horizontal,
+.rc-virtual-list-scrollbar.rc-virtual-list-scrollbar-horizontal {
+	height: var(--default-width-scrollbar) !important;
+}
+
+.ant-table-tbody-virtual-scrollbar-thumb,
+.ant-tree-list-scrollbar-thumb,
+.rc-virtual-list-scrollbar-thumb {
+	background: var(--color-scrollbar-thumb) !important;
+}
+
+.ant-table-tbody-virtual-scrollbar-thumb:hover,
+.ant-tree-list-scrollbar-thumb:hover,
+.rc-virtual-list-scrollbar-thumb:hover {
+	background: var(--color-hover-scrollbar-thumb) !important;
+}
+
+@-moz-document url-prefix() {
+	.ant-tree-list-scrollbar.ant-tree-list-scrollbar-vertical,
+	.ant-table-tbody-virtual-scrollbar.ant-table-tbody-virtual-scrollbar-vertical,
+	.rc-virtual-list-scrollbar.rc-virtual-list-scrollbar-vertical {
+		width: var(--firefox-width-scrollbar) !important;
+	}
+
+	.ant-tree-list-scrollbar.ant-tree-list-scrollbar-horizontal,
+	.ant-table-tbody-virtual-scrollbar.ant-table-tbody-virtual-scrollbar-horizontal,
+	.rc-virtual-list-scrollbar.rc-virtual-list-scrollbar-horizontal {
+		height: var(--firefox-width-scrollbar) !important;
+	}
+
+	.ant-table-tbody-virtual-scrollbar-thumb,
+	.ant-tree-list-scrollbar-thumb,
+	.rc-virtual-list-scrollbar-thumb {
+		border-radius: 0 !important;
+	}
+}
